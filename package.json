@@ -1,0 +1,28 @@
+{
+  "name": "camunda-deploy-bpmn-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to deploy bpmn files",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amardeep2006/camunda-deploy-bpmn-action.git"
+  },
+  "author": "Amar Deep Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amardeep2006/camunda-deploy-bpmn-action/issues"
+  },
+  "homepage": "https://github.com/amardeep2006/camunda-deploy-bpmn-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@vercel/ncc": "^0.34.0",
+    "axios": "^0.27.2",
+    "form-data": "^4.0.0",
+    "glob": "^8.0.3",
+    "is-glob": "^4.0.3"
+  }
+}

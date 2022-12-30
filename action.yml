@@ -1,0 +1,49 @@
+name: 'Camunda Deploy BPMN'
+description: 'Reusable gha for deploying Camunda bpmn'
+author: 'Singh, Amar Deep'
+
+inputs:
+  CAMUNDA_ENDPOINT_URL:
+    description: 'Camunda api end point url'
+    required: true
+  CAMUNDA_AUTH_USERNAME:
+    description: 'Api user name for basic auth'
+    required: false
+  CAMUNDA_AUTH_PASSWORD:
+    description: 'Password for api user for basic auth'
+    required: false
+  CAMUNDA_AUTH_BEARER:
+    description: 'Bearer Token for auth'
+    required: false            
+  BPMN_FILE_PATTERN:
+    description: 'Individual Bpmn File name or pattern to be deployed'
+    required: true
+# BPMN_MODEL_FOLDER can be a directory or sub directory e.g models OR models/Onboarding
+  BPMN_MODEL_FOLDER:
+    description: 'Folder containing bpmn,dmn and html artifacts'
+    required: false
+    default: 'models'    
+  DEPLOYMENT_NAME:
+    description: 'Deployment Name'
+    required: false       
+  CAMUNDA_TENANT_ID:
+    description: 'Camunda Tenant'
+    required: false
+  DEPLOYMENT_SOURCE:
+    description: 'Deployment Source'
+    required: false
+    default: 'github-action-cd'       
+  CUSTOM_HTTP_HEADER_NAME:
+    description: 'Name of custom http header e.g. x-api-key'
+    required: false    
+  CUSTOM_HTTP_HEADER_VALUE:
+    description: 'Value of custom http header'
+    required: false    
+  DEPLOY_CHANGED_ONLY:
+    description: 'Deploy changed only flag'
+    required: false
+    default: 'true'    
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
