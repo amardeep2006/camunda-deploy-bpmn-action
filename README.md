@@ -1,6 +1,19 @@
 # camunda-deploy-github-action
 Reusable GitHub Action to deploy Camunda Models. 
 
+* Supports multiple file formats for deployments (bpmn, dms, form, html, js)
+* Deploy Individual model file
+* Deploy Multiple files in one go / All files in a folder
+* Dynamic directory name in git repo to deploy files from
+* Support for deploy-changed-only
+* Custom Deployment name
+* Support for Basic authentication
+* Support for Auth Bearer Token (JWT)
+* Multitenant Deployments
+* Custom HTTP Headers for Apigee like gateway Authentication
+* Log Deployment Summary (Color Coded)
+* Checkout specific Tag from Git Repo for deployment
+
 ## Example for Using this action to deploy
 You can simply refer this github action in any GitHub workflow.
 
