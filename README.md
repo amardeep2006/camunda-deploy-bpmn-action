@@ -1,4 +1,4 @@
-# camunda-deploy-github-action
+# camunda-deploy-github-action for Camunda Platform 7
 Reusable GitHub Action to deploy Camunda Models. 
 
 * Supports multiple file formats for deployments (bpmn, dms, form, html, js)
